@@ -1,0 +1,25 @@
+{% extends 'website/base.html' %}
+
+{% block title %} - Documents {% endblock %}
+
+{% block content %}
+
+	<div class="container pt-5">
+	    <div class="row about-us-info ">
+	        <div class="col-md-8 col-sm-12">
+	            <h3>Documents</h3>
+	            <br>
+	            <hr>
+
+	            {% for document in documents %}
+	            	<a href="{{ document.document.url }}">
+	            		<h6>{{ document.document.name }}</h6>
+	            	</a>
+	            	<small class="text-muted">{{ document.description }}  </small> <hr><br>
+	            {% endfor %}
+
+	        </div>
+	    </div>
+	</div>
+
+{% endblock %}

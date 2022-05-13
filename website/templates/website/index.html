@@ -1,0 +1,138 @@
+{% extends 'website/base.html' %} {% load static %} {% block title %} - Home {% endblock %} {% block content %}
+<!-- background img and content -->
+<div class="bimg">
+    <div class="container">
+
+
+        <div class="row body-part">
+            <div class="col-md-6 body-part-col">
+                <p>Welcome To</p>
+                <h2>SYNERGY MANAGEMENT & SERVICES
+                </h2>
+                <button type="button" class="btn btn-primary"><a  href="{% url 'about_us' %}">More-info</a></button>
+
+            </div>
+            <div class="col-md-6 left-body-col-img">
+                <div class="bimg1"></div>
+            </div>
+        </div>
+    </div>
+
+</div>
+<!-- end background img and content -->
+<!-- card of body -->
+<div class="container mt-2">
+    <div class="why-synergy-text">
+        <h2>Synergy Management</h2>
+        <hr>
+        <br>
+
+        <p>A consultant offering accounting consulting services is a professional expert and master of his or her specialized field – the consultant is not a person who “takes over” internal decisions. He or she is a guide, a navigator and a key resource
+            for a client firm. A consultant can recommend approaches to complex problems, or advise on the intricate procedures that need to be taken to navigate through complicated business decisions. These decisions are often necessary for a business
+            to reach its full growth and operate at maximum efficiency, so consulting services are extremely valuable to a growing company.</p>
+    </div>
+
+    <div class="row card-row pt-4">
+        <div class="col-md-4 col-sm-12 item">
+
+            <div class="card item-card card-block" id="img-card">
+                <img src="{% static  'website/img/r.jpg' %}" alt="image1">
+
+
+                <div class="card-content">
+                    <a href="#">
+                        <h5 class="card-title  mt-3 mb-3">Who we are?</h5>
+                    </a>
+                    <em class="card-text"> We are prominent Chartered Accountants in nepal. We offer services in kathmandu and other major cities in nepal, like accounts outsourcing, auditing, company formation in nepal.</em>
+
+                </div>
+            </div>
+
+        </div>
+        <div class="col-md-4 col-sm-12 item">
+
+            <div class="card item-card card-block" id="img-card">
+
+                <img src="{% static  'website/img/w.jpg' %}" alt="image1">
+                <div class="card-content">
+                    <a href="#">
+                        <h5 class="card-title  mt-3 mb-3">What our vision?</h5>
+                    </a>
+                    <em class="card-text">Our firm continuously strives to be the Premier Accounting and Consultancy firm that provides excellent service to our clients and an excellent quality of life for our associates</em>
+                </div>
+            </div>
+            </a>
+        </div>
+        <div class="col-md-4 col-sm-12 item">
+
+            <div class="card item-card card-block" id="img-card">
+
+                <img src="{% static  'website/img/s.jpg' %}" alt="image3">
+                <div class="card-content">
+                    <a href="#">
+                        <h5 class="card-title  mt-3 mb-3">why choose us?</h5>
+                    </a>
+                    <em class="card-text">We will predominantly work with organisations in the charitable and voluntary sectors as partners to help them achieve their desired outcomes.</em>
+                </div>
+            </div>
+            </a>
+
+        </div>
+    </div>
+
+</div>
+
+<!-- end the card of boby -->
+
+<!-- section1  our core service-->
+<section class="bg-light">
+    <div class="container ">
+        <div class="why-synergy-text">
+            <h3>Service we offers to our happy client</h3>
+            <hr>
+
+            <p> A businessman, owning either a small scale or large scale business ought not to spend his time researching on a business accounting aspects. The aspects may be things like tax compliance laws, deduction of employees payroll and many other
+                details. The accountancy profession has experienced a rapid growth in recent times. The occurring changes in the global economy have placed great responsibilities on Chartered Accountants. The profession of accountancy has evolved from
+                audit and taxes into offering.</p>
+
+
+        </div>
+        <div class="row service-we-offer">
+            <div class="  col-lg-4 col-md-4 col-ms-10 services_card">
+                <div class="icon-part"><i class='fas fa-desktop fa-3x'></i></div>
+                <h4>Accounting audits</h4>
+                <small>It is one of the most important functions of a Chartered Accountant. It is in accounting audits that the specialized training, skill and judgment of a CA often comes into play. Accounting audit is the examination of books, vouchers, documents
+                    and accounts of any given business to verify the truth of financial statements.</small><br>
+                <a href="{% url 'accountingServices' %}"><button type="button" class="btn btn-primary">View-more</button></a>
+
+            </div>
+
+            <div class=" col-lg-4 col-md-4 col-ms-10 services_card">
+                <div class="icon-part"><i class='far fa-address-card fa-3x'></i></div>
+                <h4>Taxation</h4>
+                <small>Tax information is vital to the effective economics of business management. A CA is well trained and has the experience to offer tax compliance services. They include tax administration and process improvement to help your business in
+                    the effective management of the process of conformity and focus on a broader premeditated vision for total tax performan</small><br>
+                <a href="{% url 'accountingServices' %}"><button type="button" class="btn btn-primary">View-more</button></a>
+
+            </div>
+
+            <div class=" col-lg-4 col-md-4 col-ms-10 services_card">
+                <div class="icon-part"><i class='far fa-copy fa-4x'></i></div>
+                <h4>Assurance services</h4>
+                <small>CAs provide accounting assurance services that include the review of financial documents and any transactions such as loans, contracts, and financial websites. These services ease decision making in any business or organization as the
+                    review certifies the correctness and validity of the reviewed items.</small>
+                <br>
+                <a href="{% url 'accountingServices' %}"><button type="button" class="btn btn-primary">View-more</button></a>
+
+            </div>
+
+
+
+        </div>
+
+    </div>
+</section>
+<!-- end our core servicees -->
+
+
+{% endblock %}

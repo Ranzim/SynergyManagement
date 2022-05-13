@@ -1,0 +1,152 @@
+{% extends 'website/base.html' %} {% block title %} - Contact Us {% endblock %} {% block content %}
+
+<!-- bg image -->
+<div class="image">
+    <div class="button-btn">
+
+
+    </div>
+</div>
+<!-- end bg image -->
+
+<section class="contactus-one bg-light" id="contactus">
+    <!-- Section id-->
+    <div class="container pt-5">
+        <!-- head office contacts  us -->
+        <div class=" row contact-info pt-5">
+            <div class="col-md-6 col-sm-12">
+
+                <div class="container">
+
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 text-center">
+                            <h2 class="form-title">Get in Touch</h2>
+
+                            {% if messages %} {% for message in messages %}
+
+                            <div class="alert alert-{{ message.tags }}">
+                                {{ message }}
+                            </div>
+
+                            {% endfor %} {% endif %}
+
+                        </div>
+                    </div>
+
+                    <div class="row">
+
+                        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+
+                            <form method='POST'>
+                                {% csrf_token %}
+
+                                <div class="form-group">
+                                    <label class="form-label" id="nameLabel" for="name"></label>
+                                    <input type="text" class="form-control" id="name" name="name" placeholder="Your name*" tabindex="1" minlength="3" required>
+                                </div>
+
+                                <div class="form-group">
+                                    <label class="form-label" id="emailLabel" for="email"></label>
+                                    <input type="email" class="form-control" id="email" name="email" placeholder="Your Email" tabindex="2">
+                                </div>
+
+                                <div class="form-group">
+                                    <input type="tel" class="form-control" name="phone" placeholder="Phone number* (9xxxxxxxxx)" data-form-field="Phone" pattern="[9][0-9]{9}" required>
+                                </div>
+
+                                <div class="form-group">
+                                    <!-- <label for="branch"></label> -->
+                                    <select class="form-control" id="branch" name="branch" required>
+                                    <option>Kathmandu</option>
+                                    <option>Bhaktapur</option>
+                                    <option>Lalitpur</option>
+                                  </select>
+                                </div>
+
+                                <div class="form-group">
+                                    <label class="form-label" id="messageLabel" for="message"></label>
+                                    <textarea rows="6" cols="60" name="message" class="form-control" id="message" placeholder="Your message*" tabindex="4" name='message' required></textarea>
+                                </div>
+
+
+                                <button type="submit" class="btn btn-primary">Send message</button>
+
+
+                            </form>
+                            <!-- End form -->
+
+                        </div>
+                        <!-- End col -->
+
+                    </div>
+                    <!-- End row -->
+
+                </div>
+                <!-- End container -->
+
+
+            </div>
+            <div class="col-md-6 col-sm-12 locations">
+                <div class="head-office">
+                    <h4>Synergy Managemnt and consultaint</h4>
+                    <div class="col-md-12 col-sm-12">
+                        <p class="addre"><i class="fa fa-map-marker"></i>AT Bawulatar kathmandu -nepal - 40600</p>
+                    </div>
+                    <div class="col-md-12 col-sm-12">
+                        <p class="phone-call"><i class="fa fa-phone"></i> <a href="tel:+10484579845">+12 345 789 1234</a></p>
+                    </div>
+                    <div class="col-md-12 col-sm-12">
+                        <p class="mail-id"><i class="fa fa-envelope"></i>contact@yourcompany.com</p>
+                    </div>
+                </div>
+                <hr>
+                <div class="head-office">
+                    <h4>Bhaktpur nepal</h4>
+                    <div class="col-md-12 col-sm-12">
+                        <p class="addre"><i class="fa fa-map-marker"></i>AT Bawulatar kathmandu -nepal - 40600</p>
+                    </div>
+                    <div class="col-md-12 col-sm-12">
+                        <p class="phone-call"><i class="fa fa-phone"></i> <a href="tel:+10484579845">+12 345 789 1234</a></p>
+                    </div>
+                    <div class="col-md-12 col-sm-12">
+                        <p class="mail-id"><i class="fa fa-envelope"></i>contact@yourcompany.com</p>
+                    </div>
+                </div>
+                <hr>
+                <div class="head-office">
+                    <h4>Lalitpur nepal</h4>
+                    <div class="col-md-12 col-sm-12">
+                        <p class="addre"><i class="fa fa-map-marker"></i>AT Bawulatar kathmandu -nepal - 40600</p>
+                    </div>
+                    <div class="col-md-12 col-sm-12">
+                        <p class="phone-call"><i class="fa fa-phone"></i> <a href="tel:+10484579845">+12 345 789 1234</a></p>
+                    </div>
+                    <div class="col-md-12 col-sm-12">
+                        <p class="mail-id"><i class="fa fa-envelope"></i>contact@yourcompany.com</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- end head office contact us -->
+
+    </div>
+</section>
+<hr>
+<!-- map -->
+<div class="container">
+    <div class="map-header pt-5">
+        <h3>GET DIRECTION</h3>
+    </div>
+</div>
+<div class="row pt-5 ">
+    <div class=" col-12 col-md-12 col-sm-10 col-xs-10">
+
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3532.1984214316444!2d85.30631524922882!3d27.71115928270588!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb18fc00b9a04f%3A0x7f52a590de0ade01!2sSynergy%20Management%20and%20Consultants!5e0!3m2!1sen!2snp!4v1613549535060!5m2!1sen!2snp"
+            width="100%" height="550" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+
+    </div>
+</div>
+
+<!-- end map -->
+
+{% endblock %}
